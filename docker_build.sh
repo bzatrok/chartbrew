@@ -1,14 +1,6 @@
 #!/bin/bash
 set -e
 
-# Check for uncommitted changes
-if git diff-index --quiet HEAD --; then
-    echo "No uncommitted changes, ready to proceed."
-else
-    echo "There are uncommitted changes. Please commit them before proceeding."
-    exit 1
-fi
-
 # Get version from package.json
 PACKAGE_VERSION=$(node -p "require('./package.json').version")
 echo "Package version: $PACKAGE_VERSION"
