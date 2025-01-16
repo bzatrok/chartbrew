@@ -18,18 +18,14 @@ if command -v op &> /dev/null; then
     
     # Get Docker credentials
     DOCKER_PASSWORD=$(op item get "goc4y6fiobfjrmqw4yojs5l4ue" --format json | jq -r '.fields[] | select(.id=="credential").value')
-EOF
+fi
 
 # Build and tag Docker image
 docker build \
     --platform=linux/amd64 \
-    --secret id=env,src=.env.local.prod \
     -t $DOCKER_REPO:latest \
     -t $DOCKER_REPO:$PACKAGE_VERSION \
     .
-
-# Clean up the temporary env file
-rm .env.local.prod
 
 # Push Docker images
 docker push $DOCKER_REPO:latest
