@@ -1,6 +1,6 @@
 {
   "name": "chartbrew",
-  "version": "v3.10.0",
+  "version": "3.10.0",
   "description": "",
   "main": "index.js",
   "workspaces": [],

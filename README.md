@@ -124,7 +124,7 @@ docker run -p 4019:4019 -p 4018:4018 \
   -e CB_REDIS_PASSWORD=password \
   -e VITE_APP_CLIENT_HOST=http://localhost:4018 \
   -e VITE_APP_CLIENT_PORT=4018 \
-  -e VITE_APP_API_HOST=http://localhost:4019 \
+  -e VITE_APP_API_HOST=https://api-charts.whiskygains.com \
   razvanilin/chartbrew
 ```
 

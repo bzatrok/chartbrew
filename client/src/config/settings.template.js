@@ -1,6 +1,6 @@
 export const API_HOST = import.meta.env.PROD
   ? import.meta.env.VITE_APP_API_HOST
-  : (import.meta.env.VITE_APP_API_HOST_DEV || "http://localhost:4019");
+  : (import.meta.env.VITE_APP_API_HOST_DEV || "https://api-charts.whiskygains.com");
 
 export const SITE_HOST = import.meta.env.PROD
   ? import.meta.env.VITE_APP_CLIENT_HOST
